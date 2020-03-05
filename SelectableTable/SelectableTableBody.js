@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import SelectableTableRow from "./SelectableTableRow";
 
 export default function SelectableTableBody({
-	// checkedRows,
 	arrData,
 	cells,
 	onChange,

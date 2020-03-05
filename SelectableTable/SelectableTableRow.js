@@ -15,18 +15,18 @@ export default function SelectableTableRow({
 
 	return (
 		<tr
-			css={(theme) => ({
-				borderTop: `1pt solid ${theme.separatorColor}`,
-				paddingBottom: "0.2rem",
-				paddingTop: "1.3rem",
-			})}
+			// css={(theme) => ({
+			// 	borderTop: `1pt solid ${theme.separatorColor}`,
+			// 	paddingBottom: "0.2rem",
+			// 	paddingTop: "1.3rem",
+			// })}
 			key={rowKey}
 		>
 			<td
-				css={{
-					borderTop: "inherit",
-					padding: "inherit",
-				}}
+				// css={{
+				// 	borderTop: "inherit",
+				// 	padding: "inherit",
+				// }}
 			>
 				<input
 					type = "checkbox"
@@ -39,10 +39,10 @@ export default function SelectableTableRow({
 			{cells.map((cell, index) => (
 				<td
 					key={index}
-					css={{
-						borderTop: "inherit",
-						padding: "inherit",
-					}}
+					// css={{
+					// 	borderTop: "inherit",
+					// 	padding: "inherit",
+					// }}
 				>
 					{cell({ data })}
 				</td>

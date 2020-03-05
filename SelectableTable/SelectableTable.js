@@ -2,13 +2,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import SelectableTableHeader from "./SelectableTableHeader";
 import SelectableTableBody from "./SelectableTableBody";
-
+import defaultStyle from "./defaultStyle";
 
 export default function SelectableTable({
 	arrData,
 	setData,
 	arrColumnNames,
 	cells,
+	customCSS,
 })
 {
 	/*
@@ -65,8 +66,8 @@ export default function SelectableTable({
 	return (
 		<table
 			css={{
-				borderCollapse: "separate",
-				borderSpacing: "0rem 0.5rem",
+				...defaultStyle.table,
+				...customCSS,
 			}}
 		>
 			<SelectableTableHeader
@@ -76,7 +77,6 @@ export default function SelectableTable({
 			/>
 			<SelectableTableBody
 				arrData = {arrData}
-				// checkedRows = {checkedRows}
 				onChange = {fnSelect}
 				cells = {cells}
 			/>

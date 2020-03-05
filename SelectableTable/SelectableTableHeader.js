@@ -17,26 +17,22 @@ export default function SelectableTableHeader({
 		</th>
 	);
 
-	const selectAllInputReference = useRef(null);
+	const globalToggleReference = useRef(null);
 
 	const handleChange = (/* event */) => {
-		onChange(selectAllInputReference.current.checked);
+		onChange(globalToggleReference.current.checked);
 	};
 
 	return (
 		<thead>
 			<tr>
-				<th
-					css={{
-						minWidth: "3rem",
-					}}
-				>
+				<th>
 					<input
 						type = "checkbox"
 						aria-label = "toggle all rows selected"
 						checked = {checked}
 						onChange = {handleChange}
-						ref={selectAllInputReference}
+						ref={globalToggleReference}
 					/>
 				</th>
 				{arrColumnNames.map(makeHeaderField)}
